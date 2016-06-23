@@ -1,0 +1,17 @@
+Exceptions, Reading and Writing Files, and File Dialogs (Mock Database, Part 2)
+
+The code for this lab can be found starting on page 685 (Ch.17).  Both sections 17.5 and 17.6 are needed to read and write a sequential text file.  From the book, we will be using most of the code from the saveButton_Click and the openButton_Click events.
+
+Open the lab from last session and add 2 more Buttons to the Data Entry Form.  The first one should be “Save As” and “Load File”.  Disable the Save button at start and enable it in the Add button’s click event (where you are enabling the other buttons).   Also In the code-behind, be sure you have using System.IO at the top.
+
+Copy most of the code from the Save Button in the book into your Save As button event and also from the Open File button into your Load File event.  The objective for both of these events is to determine a valid filename.  Pay special attention to the Exception handling (try-catch) with the Save File Dialog and the Open File Dialog because in these 2 we access the hard-drive and the program must do error-checking or serious issues can result.   For example, in the Save As, copy the code in the book up to the "try" part... inside the Try, just have 1 line that calles the SaveFruitBasket() and send in the filename.
+
+Create a private method called SaveFruitBasket() which returns nothing and requires a filename (String) be passed in.  The Save As Button should call this method after it has a valid filename.  In this method, first make a call to UpdateFruit() and send in the current ID value.  Next, create and open the File Writer object.  Next, loop through the fruitBasket (ArrayList) using a FOREACH loop (covered in class) and output each Fruit into the file using the File Writer’s WriteLine method (see page 687).  You will need to convert the data from the Getters of the Fruit class into Strings in this process to be able to do the string concatenation (+) as shown in the book.  Finally, close the File Writer after all of the data has been written (see the exit button code on page 688).
+
+Create a private method called LoadFruitBasket() which returns nothing and requires a filename (String) be passed in.  The Load File Button should call this method after it has a valid filename.  In this method, Clear out the existing fruitsBasket first.  Then, load the data line-by-line and create 1 new Fruit per line of data (see page 693).  You will need to convert the data into the correct data type before using the Setters of the Fruit class.  Once you have a new fruit populated, add the Fruit to the fruitsBasket.   In a sense, this acts like an automated Add event!  Close the File Reader in this method.
+
+One final thing you must do in the LoadFruitBasket() method is to call the DisplayFruits() method and pass in 0 for currFruit so that the first Fruit is shown to the user.
+
+Include comments in the code-behind!
+
+ZIP and Upload the entire SOLUTION to the Portal.  Retain for future labs and exams!

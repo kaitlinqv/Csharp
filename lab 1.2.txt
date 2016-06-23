@@ -1,0 +1,11 @@
+Review B: Classes in C#
+
+Modify the program from Lab 1-1 by introducing a C# class.  You will migrate (move) some of your code from the main program into this class.  You will need to determine what the private variables will be and what methods you should have in this class as well as how to consume (use) the class in main. 
+ 
+Be sure to take advantage of the C# shortcut syntax for default getters and setters (as we covered in class).  Also, be sure to provide a base Constructor that sets the private members (variables) to 0. 
+ 
+There are several ways to create your class and main program and solutions will vary!
+ 
+Include comments in all sections and comment out any old code in your main program that you no longer need instead of deleting!!
+ 
+ZIP and Upload the entire SOLUTION to the Portal.  Retain for future labs and exams!

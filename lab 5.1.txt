@@ -1,0 +1,16 @@
+
+Advanced Topics:  Delegates and Lambda Expressions (Making a Calculator)
+ 
+Revisit the lab from Week 1 Day 1 of the course where we did the math functions (without Classes).  Remember that one?  ;) 
+ 
+Modify your code and replace the 4 math functions/methods with delegates and lambda expressions as was shown in class.
+ 
+Helpful link:  https://msdn.microsoft.com/en-us/library/bb397687.aspx
+ 
+[TRY THIS NEXT PART, PARTIAL CREDIT WILL BE GIVEN]
+ 
+Replace the main program (console application) with a new, slick Calculator UI that will work with your modified code.  Users should not be able to edit the TextBox and be forced to click the buttons (like a real calculator).  Also, introduce a new TOTAL or = command button that will compute the total.
+ 
+To make it easier, only provide for integers 0 – 9 (no decimals), no negatives, and only +, -, *, /, =
+ 
+ZIP and Upload the entire SOLUTION to the Portal.  Retain for future labs and exams!

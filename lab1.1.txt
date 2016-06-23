@@ -1,0 +1,19 @@
+Lab 1.1
+
+Review A: Variables, Functions, I/O, Selection, and Loops in C#
+
+This lab is designed to get you used to the Visual Studio IDE and C#.  Begin with a Console Application.
+ 
+In the static main(), prompt the user to enter: num1 (double), num2 (double), option (int), and name (String). 
+ 
+The values for option should be between 0 and 3.  Use a proper loop with a Boolean conditional statement to prevent bad inputs for the option variable.
+ 
+Create 4 static functions that each take 2 double parameters as inputs and return a double.  They should be called getSum(), getDifference(), getProduct() and getQuotient().  Put the proper math into each function.
+ 
+Back in main(), based on the user’s input for option, call the appropriate function and output the result.  Also, be sure to output name, num1, and num2 as well.
+ 
+Using a secondary loop in main, ask the user if they want to run the program again.  Be sure you prompt the user correctly for how to get out of the loop or continue.
+ 
+Include comments!!  Don’t forget to add detailed comments before each function!!
+ 
+ZIP and Upload the entire SOLUTION to the Portal.  Retain for future labs and exams!

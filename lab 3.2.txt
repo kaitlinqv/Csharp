@@ -1,0 +1,22 @@
+MDI Forms, Modal Forms, and Passing Variables
+ 
+Create a new Windows Forms project and build a Screen with a Label that has Name = “lblMessage” and a Button control with its Text = “Close”.   Add code to the Button click event to close the form.
+ 
+Add a second Windows Form to the same project and set its Text = “MDI Parent Window”.  This form will need to have its IsMdiContainer property = True.  You will notice something interesting about the design of this form as it is meant to contain other forms!  Change Main() in Program.cs to show the Parent (2nd Window) instead of the first form so that the MDI Parent is the starting form.
+ 
+NOTE:
+MDI means “Multiple Document Interface”…. And that’s what most applications use today (Like Word and Excel) where there is 1 parent form and several child forms.  Each page of a Word document or a sheet in Excel is a child form to the overall Parent.
+ 
+Add a MenuControl to the MDI Parent form.  Include an option to “Open a New Form”.  Wire the click event of this option to Show() a new instance of the Child Form (Form1).  Be sure you also set the child's MDIParent!   You can make the first form a child of the second one by setting its MdiParent = this right before you show it in the Parent (like we did in class).  At this point, run the application and see what happens if you click the “Open a New Form” many times without closing any of the child forms that it opens.  Now, close the MDI Parent to stop the application.
+ 
+Add a third Windows Form called ModalForm.  Add a TextBox control to this form.  Go back to the MDI Parent menu control and add another option to “Open Modal Form” and wire up its click event to open the new form using ShowDialog().  The difference between a Modal and non-Modal is simply whether or not you do Show() or ShowDialog().  Run the application and see what happens.
+ 
+Finally, add a Button to the ModalForm with Text="Close and Show" and have it Close() the modal form (itself).   However, before it closes, add additional code that will "pass" the Text value of the TextBox (that is in this form) into a new instance of Form1 (the form with the Label in it) and use ShowDialog().  In the Form1 Load Event, set the Label’s Text property to the Modal form's TextBox (which just closed).   
+
+You cannot access any of the controls on one form directly from another form.  You will need to create a private variable with a Set/Get (or Property) in Form1 that the ModalForm can use to communicate!  The MDI Parent is not involved here.   Basically, Form1 can be opened by either the MDI Parent or the Modal Form, but the Modal Form will communicate the value of its TextBox before opening Form1.   
+
+You could also set Form1's label when it is launched by the MDI Parent in much the same way as what is being done by the Modal form closing button.
+  
+Include comments in the code-behind!
+ 
+ZIP and Upload the entire SOLUTION to the Portal.  Retain for future labs and exams!

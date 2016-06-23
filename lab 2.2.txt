@@ -1,0 +1,19 @@
+More Controls: Checkbox, Radio, and ListBox
+ 
+Create a new Windows Forms project and build a Screen with a Checkbox control and set its Text property = “Enable Controls”.   Add a Button control and set its Text = “Clear List”.
+ 
+Add 3 Radio button controls.   These buttons work together to only allow 1 of the 3 to be “checked” at any given time.  Set the Text property of these buttons as follows:  “Banana”, “Apple” and “Orange”
+ 
+Add a ListBox control and Label control (put the Label right above the ListBox).  Set the Text property of the Label control to “Your Fruits:”
+ 
+Make 5 Events by clicking on the CheckBox, Button and each of the Radio buttons.  DO NOT add an Event for the ListBox!
+ 
+In the code-behind, add logic to the CheckBox event so that, if it is checked (using the Checked property… this is a Boolean), set the Enabled property of ALL other controls to true.  Otherwise, set them all to false.  DO NOT change the Checkbox control’s property!
+ 
+For each Radio button checked event, add to the ListBox the Text from the current Radio Button.
+ 
+Finally, in the Button’s event, clear out the ListBox using the Clear() method.
+ 
+Include comments in the code-behind!
+ 
+            ZIP and Upload the entire SOLUTION to the Portal.  Retain for future labs and exams!

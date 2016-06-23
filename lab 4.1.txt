@@ -1,0 +1,44 @@
+
+Advanced Windows Forms using a Class and ArrayList (Mock Database, Part 1)
+ 
+Create a new Windows Forms project and rename Form1 as frmDataEntry and set the form’s Text = “Data Entry Form”.  We will add several controls to this form.  Usually, data entry forms are attached to a database table and allow us to view/update one row of data at a time.
+
+[Fruit Class]
+
+Before continuing with the form, Add a new Class file to the Project called Fruit.  You should include the following private members:   ID (int), name (String), unitPrice (double), hasSeeds (bool), isTropical (bool).  Note that we have 2 Booleans here.
+
+Include both a BASE and FULL constructor (overloaded methods), Setters and Getters (either the C# property version or the traditional get/set methods).  DO NOT create a display method.
+
+[Data Entry Form - UI]
+
+Once you have made the class, go back to the form and add Labels and TextBoxes (paired up) for the ID, Name and Unit Price.  Add a CheckBox for the Has Seeds and Is Tropical.  Be sure to set the Text property of the Labels and CheckBoxes!  Make the 3 TextBoxes and 2 CheckBoxes disabled.  Finally, set the ReadOnly property of the ID TextBox = True.  The user should not be able to change the ID.  DO NOT double-click any of these controls.  They will not have Events.
+
+In the lower part of the form, add the following 4 Buttons and go ahead and setup their Click Events:   Next, Prev, Add, and Close.   Make the Next and Prev buttons Disabled so the form loads with these deactivated.  The Click Event for the Close button should simply close the form.  We will come back to the first 3 buttons in a bit.
+
+[Data Entry Form – Code Behind]
+
+In the code-behind of the form, add a private variable to this class called fruitBasket and make it an ArrayList.  Make sure you have using System.Collections at the top of your code-behind (Generics will not work). 
+
+Add a private method (not an Event) to called DisplayFruit().  The method should not return anything, but it requires a variable called currFruit (int).  Inside this method, find the Fruit in the fruitBasket based on the currFruit as its index.  Finally, use the “Getters” to display the variables (data) of the fruit in the controls (Textboxes and CheckBoxes).  You will need to “unbox” or “typecast” the Fruit first to access the getters.  Also, the Text property of the TextBoxes only take strings, so you will need to Convert.ToString() your numeric values.
+
+Add a second private method called UpdateFruit() that should not return anything and requires a variable called currFruit (int). Inside this method, find the Fruit in the fruitBasket based on the currFruit value provided.  Use the Setters to update the fruit with what you have in the controls (Textboxes and CheckBoxes).  This should look like a reversed version of the DisplayFruit(), but will NOT mess with the ID.
+
+[Add button Click Event]
+
+First, check if the value of the ID TextBox is “”.  If it is not blank, you will need to call the UpdateFruit() method and pass in the value in the ID box.  Be sure you convert it to an Int32!  
+
+Next, Enable the Next and Prev Buttons, all the TextBoxes, and the 2 CheckBoxes.
+
+Now, create a new Fruit object using the following steps:  1) use the BASE Constructor and 2) use the ID’s setter to set ID = the ArrayList’s Count Property.  The ID of the Fruit will match its Index in the ArrayList.   Now Add the Fruit to the fruitBasket.  Finally, call the DisplayFruit() method and pass in the current fruit’s ID (or the ArrayList’s Count will work too as they will be the same).
+
+[Prev and Next button Click Events]
+
+In both, convert the current ID TextBox’s Text property into an Int32 and store it in a local variable called tempID (int).  Call the UpdateFruit() method and pass in the tempID. 
+
+In Prev, subtract 1 from tempID and then check if tempID is negative.  If true, display an error message using MessageBox.Show().  Else, call DisplayFruit() and pass in the tempID
+
+In Next,  add 1 to the tempID and then check if tempID == fruitBasket.Count.  If true, display an error message using MessageBox.Show().  Else, call DisplayFruit() and pass in the tempID
+
+Include comments in the code-behind!   Make sure to give different values for each Fruit when you hit Add.
+
+ZIP and Upload the entire SOLUTION to the Portal.  Retain for future labs and exams!

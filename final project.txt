@@ -1,0 +1,29 @@
+
+Hangman for Windows!
+ 
+Write a program that does the following: 
+ 
+Use a String array to store some 5 letter words.  Keep it simple by making all words the same length, or challenge your UI skills by doing different length words!
+Build a UI with a hangman image (use a PictureBox) and let the user try to guess the word by doing one of two things:  1) guess a letter or 2) guess the word itself.
+You should use a set of Radio buttons and TextBoxes for the guessing part, along with a Button that does the guess.  Make sure you limit the TextBox for the single letter guess to 1 character.
+Find a way to display the guessed letters to the user while keeping the missing letters hidden
+Congratulate the user or inform them they have lost.  In either case, ask if they want to play again
+Comment your code or lose points!
+ 
+DO NOT CHEAT!  CODE SHOULD NOT BE IDENTICAL BETWEEN STUDENTS!
+ 
+Submit your final Solution (ZIPPED) to the Portal.
+ 
+Present your program to the class and explain your code.
+ 
+NOTE:  You will need to do a lot of searching in the string array when the user guesses a letter and also string comparisons.  Don’t forget to use .ToLower() or .ToUpper before ==.
+ 
+ 
+Grading Rubric (Points Breakdown)
+ 
+Adequate use of comments…… 10 points
+Code compiles, runs, works...... 20 points
+Presentation ......……………….  20 points 
+
+
+change
